@@ -14,7 +14,8 @@ extern "C" {
     
 #include <pthread.h>
 #include <sys/socket.h>
-#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <netinet/ip.h>
 
 typedef enum {
     STARTED = 1,

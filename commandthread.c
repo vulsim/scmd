@@ -18,7 +18,7 @@ void *command_thread_func(void *arg) {
     cmDesc->s_addr.sin_addr.s_addr = INADDR_ANY;
     cmDesc->s_addr.sin_port = htons(3150);
     
-    if (bind(cmDesc->s_socket_desc, (struct sockaddr *)&cmDesc->s_addr, sizeof(sockaddr_in)) < 0) {
+    if (bind(cmDesc->s_socket_desc, (struct sockaddr *)&cmDesc->s_addr, sizeof(cmDesc->s_addr)) < 0) {
         perror("Error: Socket BIND failed");
         return 1;
     }
